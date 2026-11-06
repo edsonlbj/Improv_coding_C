@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"atlascode.bitbucket.explorer.enabled": true,
+		"files.associations": {
+			"inttypes.h": "c"
+		}
+	}
+}

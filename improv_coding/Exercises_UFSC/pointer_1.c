@@ -1,15 +1,18 @@
-#include "stdio.h"
+#include <stdio.h>
 
-int main() 
+int main(void)
 {
-    int y, *p, x; // Declare the variables y and x and the pointer p. All as INT
-    y = 0;        // Initialize y with 0
-    p = &y;       // Initialize the pointer p with the addres of the variable y
-    x = *p;       // Initialize x with the value pointed by p (that is the value of y=0)
-    x = 4;        // Change the value of x to 4
-    (*p)++;       // Increment the value pointed by p (that is the value of y) by 1. So now y=1
-    x--;          // Decrement the value of x by 1. So now x=3
-    *p += x;      // Increment the value pointed by p (that is the value of y) by the value of x(that is 3). Now y=4
-    printf("y = %d \n", y); //print "y = 4"
-    return(0);
+    int y = 0;
+    int x;
+    int *p = &y;
+
+    x = *p;  // x gets the current value of y, which is 0.
+    x = 4;   // x is updated to 4.
+
+    (*p)++;  // The value pointed by p is incremented by 1. Since p points to y, y becomes 1.
+    x--;     // x is decremented by 1, so x becomes 3.
+    *p += x; // The value pointed by p is increased by x. Now y becomes 1 + 3 = 4.
+
+    printf("y = %d\n", y); // Print the final value of y, which is 4.
+    return 0;
 }
